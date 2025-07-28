@@ -64,6 +64,13 @@ export function MidBannerLogo({ className, dict }: MidBannerLogoProps) {
               {dict.midBanner.partnerText}
               <span className="font-bold">{dict.midBanner.becomeAgent}</span>
             </p>
+            <Image
+              alt="Western Union"
+              src="/mt-logo-4.png"
+              width={100}
+              height={60}
+              className="mx-4"
+            />
           </div>
         ))}
       </motion.div>

@@ -94,9 +94,9 @@ function Header({ dict, lang }: { dict: any; lang: string }) {
               <CurrencyDollar className="h-5 w-5 flex-shrink-0" />
               <p className="text-sm font-medium">
                 {lang === "en"
-                  ? "Join WU network with us and start earning money:"
+                  ? "Join Western Union network with us and start earning money:"
                   : lang === "pl"
-                    ? "Dołącz do sieci WU z nami i zacznij zarabiać:"
+                    ? "Dołącz do sieci Western Union z nami i zacznij zarabiać:"
                     : "Приєднуйтесь до мережі WU з нами та почніть заробляти:"}
               </p>
             </div>
