@@ -1,0 +1,410 @@
+{
+  "metadata": {
+    "description": "Wysyłaj pieniądze na cały świat z Twister. Szybkie, bezpieczne i przystępne cenowo usługi przekazów pieniężnych obsługiwane przez Western Union.",
+    "ogDescription": "Szybkie i bezpieczne międzynarodowe przekazy pieniężne z Twister i Western Union."
+  },
+  "navbar": {
+    "becomeAgent": "Zostań agentem",
+    "aboutUs": "O nas",
+    "westernUnion": "Western Union",
+    "trackTransfer": "Wyślij / odbierz",
+    "contact": "Kontakt",
+    "login": "Strefa Agenta"
+  },
+  "hero": {
+    "title": "Przekazy pieniężne Western Union",
+    "subtitle": "Od 25 lat jesteśmy oficjalnym partnerem Western Union w Polsce. Wysyłaj i odbieraj pieniądze bezpiecznie!",
+    "becomeAgentButton": "Zostań agentem",
+    "sendReceiveButton": "Dowiedz się więcej",
+    "imageAlt": "Usługa Western Union"
+  },
+  "aboutUs": {
+    "title": "O nas",
+    "lead": "Jesteśmy zaufanym biurem podróży i oficjalnym partnerem Western Union w Polsce, z dumą łącząc ludzi i miejsca od ponad 30 lat.",
+    "mission": {
+      "title": "Nasza misja",
+      "paragraph1": "Twister to renomowane biuro podróży z ponad 30-letnim doświadczeniem na rynku. Od ponad dwóch dekad pomagamy ludziom pozostać w kontakcie dzięki szybkim i bezpiecznym przekazom pieniężnym. Jako oficjalny partner Western Union w Polsce z dumą zarządzamy ogólnopolską siecią ponad 200 zaufanych agentów. Niezależnie od tego, czy wysyłasz pieniądze bliskim, czy odbierasz wsparcie z zagranicy — jesteśmy tu, by każda transakcja przebiegała sprawnie, bezpiecznie i bez zbędnego stresu. Zapewniamy pełne wsparcie zarówno klientom, jak i partnerom w całej Polsce.",
+      "paragraph2": "Chcesz zostać agentem Western Union? Dołącz do naszej rozwijającej się sieci i skorzystaj z preferencyjnych stawek, profesjonalnego doradztwa i indywidualnego wsparcia na każdym etapie współpracy."
+    },
+    "stats": {
+      "yearsWithWU": "Lat współpracy z WU",
+      "agents": "Agentów w Polsce"
+    },
+    "location": {
+      "title": "Znajdź nas",
+     "company": "BP Twister (Western Union Partner)",
+      "street": "ul. Kościuszki 27",
+      "city": "50-011 Wrocław",
+      "country": "Polska"
+    },
+    "images": {
+      "map": "Mapa lokalizacji biura",
+      "office": "Biuro firmy",
+      "team": "Zespół firmy"
+    }
+  },
+  "westernUnion": {
+    "title": "Western Union",
+    "lead": "Western Union (WU) to światowy lider w międzynarodowych transferach pieniężnych, oferujący szybkie i niezawodne usługi\n w ponad 200 krajach. Łączy konta bankowe, portfele cyfrowe, karty\n i sieć punktów, umożliwiając wygodne przesyłanie i odbieranie pieniędzy.",
+    "images": {
+      "headquarters": "Siedziba Western Union"
+    },
+    "services": {
+      "title": "Zalety Western Union",
+      "items": [
+        {
+          "title": "Globalny zasięg",
+          "description": "Przekazy pieniężne do ponad 200 krajów i terytoriów."
+        },
+        {
+          "title": "Wiele opcji przekazów",
+          "description": "wysyłaj środki osobiście w ponad 500 000 lokalizacji agentów, zainicjowane za pośrednictwem aplikacji mobilnej."
+        },
+        {
+          "title": "Elastyczne metody dostawy",
+          "description": "odbiorcy mogą otrzymywać pieniądze bezpośrednio na swoje konta bankowe, portfele mobilne lub odbierać gotówkę w lokalizacjach agentów."
+        },
+        {
+          "title": "Śledzenie w czasie rzeczywistym",
+          "description": "monitoruj swoje przekazy za pomocą unikalnego numeru kontrolnego przekazu pieniężnego (MTCN)."
+        },
+        {
+          "title": "Konkurencyjne kursy wymiany",
+          "description": "korzystaj z kursów wymiany w czasie rzeczywistym i przejrzystych opłat."
+        },
+        {
+          "title": "Bezpieczeństwo i niezawodność",
+          "description": "ciesz się spokojem dzięki szyfrowanym transferom i solidnym środkom zapobiegania oszustwom."
+        }
+      ]
+    },
+    "stats": {
+      "title": "Liczby",
+      "yearsInBusiness": "Lat działalności",
+      "countriesAndTerritories": "Krajów i terytoriów",
+      "locations": "(tyś) Lokalizacji w Polsce",
+      "transactionsPerSecond": "Lat w Polsce"
+    },
+    "history": {
+      "title": "Krótka historia",
+      "lead": "Western Union został założony w 1851 roku i z czasem stał się globalnym liderem w dziedzinie międzynarodowych i wielowalutowych transferów pieniędzy oraz płatności.",
+      "paragraphs": [
+        "WU swoja działalność zapoczątkował jako dostawca usług telegraficznych, rewolucjonizując komunikację w Stanach Zjednoczonych. ",
+        "Do 1861 roku Western Union ukończył pierwszą transkontynentalną linię telegraficzną, łączącą wschodnie i zachodnie wybrzeże.",
+
+        "W 1871 roku Western Union wprowadził usługi transferu pieniędzy, które z czasem stały się główną działalnością firmy.",
+
+        "Przez cały okres XX wieku Western Union nieprzerwanie rozwijał swoje usługi oraz globalny zasięg na całym świecie. Dziś, będąc obecny w ponad 200 krajach i terytoriach, WU dostosował się do zmieniających się potrzeb klientów. Oferuje szeroki zakres usług finansowych, które łączą ludzi oraz firmy na całym świecie.",
+        "Dziedzictwo innowacji Western Union trwa nadal, gdy firma przyjmuje transformację cyfrową, jednocześnie utrzymując swoje zaangażowanie w obsługę społeczności na całym świecie."
+      ],
+      "images": {
+        "headquarters": "Siedziba Western Union",
+        "telegraphEquipment": "Historyczny sprzęt telegraficzny",
+        "telegraphStation": "Stacja telegraficzna",
+        "telegraphOperator": "Operator telegrafu"
+      }
+    },
+    "faq": {
+      "title": "Często zadawane pytania",
+      "subtitle": "Odpowiedzi na najczęściej zadawane pytania o Western Union"
+    }
+  },
+  "trackTransfer": {
+    "metadata": {
+      "title": "Śledź swój przekaz pieniężny | Twister",
+      "description": "Łatwo sprawdź status swojego międzynarodowego przekazu pieniężnego za pomocą naszej bezpiecznej usługi śledzenia Western Union."
+    },
+    "title": "Śledź swój przekaz pieniężny",
+    "lead": "Łatwo sprawdź status przekazu pieniężnego za pomocą naszej bezpiecznej usługi.",
+    "howItWorks": {
+      "title": "Jak to działa",
+      "description1": "Bądź na bieżąco ze statusem swojego przekazu pieniężnego w czasie rzeczywistym. Nasz system śledzenia zapewnia natychmiastową aktualizację i dostęp do informacji, gdzie znajdują się Twoje pieniądze w procesie przekazu, od wysłania do wypłaty.",
+      "description2": "Aby śledzić swój przekaz, potrzebujesz numeru kontrolnego przekazu pieniężnego (MTCN), który został wygenerowany przy inicjowaniu przekazu. Ze względów bezpieczeństwa zostaniesz przekierowany na oficjalną stronę śledzenia Western Union."
+    },
+    "trackButton": "Śledź swój przekaz teraz",
+    "redirectNotice": "Zostaniesz przekierowany do oficjalnej usługi śledzenia przekazów Western Union.",
+    "image": {
+      "alt": "Usługa śledzenia przekazu pieniężnego"
+    }
+  },
+  "midBanner": {
+    "partnerText": "WU Master Agent w Polsce - ",
+    "becomeAgent": "Zostań Agentem WU z nami"
+  },
+  "prices": {
+    "title": "Odwiedź nas i wyślij pieniądze już teraz!",
+    "description": "W naszym biurze we Wrocławiu możesz wysłać bądź odebrać pieniądze. Czekamy na Ciebie.",
+    "contactButton": "Skontaktuj się z nami",
+    "promotion": "Aktualna promocja: Wyślij pieniądze na Ukrainę za jedyne 9,99 PLN!",
+    "rates": "Aktualne ceny",
+    "toCash": "Gotówka",
+    "toBank": "Konto bankowe",
+    "from": "od",
+    "howToSend": {
+      "title": "Jak wysłać przekaz pieniężny",
+      "steps": [
+        {
+          "title": "Odwiedź agenta",
+          "description": "Znajdź najbliższy punkt agenta Western Union korzystając z naszej wyszukiwarki lokalizacji."
+        },
+        {
+          "title": "Podaj dane odbiorcy",
+          "description": "Podaj imię i nazwisko odbiorcy oraz kraj docelowy. W przypadku przekazu na konto bankowe potrzebujesz danych konta."
+        },
+        {
+          "title": "Okaż ważny dokument tożsamości",
+          "description": "Przedstaw dokument tożsamości ze zdjęciem wydany przez odpowiedni urząd i podaj swoje dane kontaktowe."
+        },
+        {
+          "title": "Zapłać za przekaz",
+          "description": "Zapłać kwotę przekazu plus opłaty."
+        },
+        {
+          "title": "Odbierz paragon",
+          "description": "Zachowaj potwierdzenie z numerem śledzenia (MTCN), aby przekazać go odbiorcy i śledzić swój przekaz."
+        }
+      ]
+    },
+    "howToReceive": {
+      "title": "Jak odebrać przekaz pieniężny",
+      "steps": [
+        {
+          "title": "Odwiedź punkt agenta",
+          "description": "Udaj się do dowolnego punktu agenta Western Union z odpowiednim dokumentem tożsamości."
+        },
+        {
+          "title": "Podaj dane przekazu",
+          "description": "Przekaż agentowi numer śledzenia (MTCN), spodziewaną kwotę przekazu, kraj nadania i informacje o nadawcy."
+        },
+        {
+          "title": "Okaż ważny dokument",
+          "description": "Przedstaw dokument tożsamości wydany przez odpowiedni urząd, który odpowiada nazwisku odbiorcy."
+        },
+        {
+          "title": "Odbierz pieniądze",
+          "description": "Odbierz swoje pieniądze i zachowaj potwierdzenie dla swoich archiwów."
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": "Zastrzeżenie",
+      "text": "Globalny zasięg: przekazy pieniężne do ponad 200 krajów i terytoriów.",
+      "westernUnionNotice": "Western Union zarabia na wymianie walut. Przy wyborze usługi przekazu pieniężnego, dokładnie porównaj zarówno opłaty za transfer, jak i kursy wymiany. Opłaty, kursy wymiany walut i podatki mogą się różnić w zależności od marki, kanału i lokalizacji w oparciu o szereg czynników."
+    },
+    "howToReceiveDetailed": {
+      "title": "Jak odebrać przekaz pieniężny",
+      "steps": [
+        {
+          "title": "Odwiedź nasz punkt",
+          "description": "Przyjdź do dowolnego z naszych punktów obsługi w godzinach pracy."
+        },
+        {
+          "title": "Przygotuj MTCN",
+          "description": "Przygotuj numer kontrolny przekazu pieniężnego (MTCN). Jest on dostarczany przez nadawcę."
+        },
+        {
+          "title": "Weź ważny dokument tożsamości",
+          "description": "Okaż ważny dokument tożsamości ze zdjęciem wydany przez rząd (paszport, dowód osobisty, karta pobytu)."
+        },
+        {
+          "title": "Podaj szczegóły przekazu",
+          "description": "Poinformuj o oczekiwanej kwocie i kraju pochodzenia przekazu."
+        },
+        {
+          "title": "Dodatkowa weryfikacja",
+          "description": "Bądź gotowy na dodatkowe pytania w ramach naszych procedur bezpieczeństwa."
+        },
+        {
+          "title": "Odbierz pieniądze",
+          "description": "Po weryfikacji otrzymasz pieniądze w lokalnej walucie."
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Zawsze stawiamy naszych klientów na pierwszym miejscu.",
+    "getStarted": "Rozpocznij",
+    "names": {
+      "katerina": "Katerina",
+      "michail": "Michał",
+      "tatiana": "Tatiana",
+      "veronica": "Weronika",
+      "ado": "Ado",
+      "monika": "Monika"
+    },
+    "titles": {
+      "ukraineSender": "regularnie wysyła do Ukrainy",
+      "moldovaSender": "wysyła pieniądze do Mołdawii",
+      "georgiaSupporter": "wspiera swoją rodzinę w Gruzji",
+      "ukReceiver": "otrzymuje pieniądze z UK",
+      "zimbabweSupporter": "wspiera krewnych w Zimbabwe"
+    },
+    "quotes": {
+      "customerSupport": "Obsługa klienta jest na najwyższym poziomie. Zawsze mogę na nich liczyć, gdy potrzebuję pomocy.",
+      "security": "Wybierając Twister – Money Transfer czuje się bezpiecznie\n i mam pewność, że moje pieniądze są w dobrych rękach",
+      "proficiency": "Są najbardziej profesjonalni\n w wysyłaniu pieniędzy do Mołdawii. Zawsze pomocni i przyjaźni.",
+      "availability": "Zawsze mają środki do wypłaty, w przeciwieństwie do innych agentów czy konkurencji.",
+      "efficiency": "Szybka usługa, która pozwala mi wspierać rodzinę, gdy najbardziej tego potrzebują.",
+      "convenience": "Korzystam z ich usług od lat. Transakcja maksymalnie 5 minut, w pełnym poczuciu bezpieczeństwa."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Chcesz wysłać lub odebrać przekaz?",
+      "highlightSend": "wysłać",
+      "highlightReceive": "odebrać",
+      "description": "Zapraszamy do nas – profesjonalny zespół pomoże Ci w sprawnym i bezpiecznym sfinalizowaniu transakcji.",
+      "address": "Adres",
+      "companyName": "Western Union Wrocław",
+      "street": "ul. T. Kościuszki 27",
+      "city": "50-011 Wrocław",
+      "country": "Polska",
+      "phone": "Telefon",
+      "phoneNumber": "+48 71 343 90 26",
+      "email": "Email",
+      "emailAddress": "kontakt@moneytransfer.pl",
+      "contactUs": "Skontaktuj się z nami",
+      "viewMap": "Zobacz na mapie"
+    },
+    "columns": {
+      "becomeAgent": "Zostań agentem",
+      "benefits": "Korzyści",
+      "form": "Formularz",
+      "faq": "FAQ o współpracy",
+      "westernUnion": "Western Union",
+      "about": "O Western Union",
+      "history": "Historia",
+      "support": "FAQ o przekazach",
+      "language": "Język"
+    },
+    "company": {
+      "description": "Twister Poland od 25 lat jest oficjalnym partnerem Western Union. Z dumą wspieramy potrzeby przekazów pieniężnych naszych klientów, oferując szybki i bezpieczny serwis.",
+      "copyright": "© {year} Twister Poland. Wszelkie prawa zastrzeżone.",
+      "createdBy": "Wykonane przez AiVerge.io"
+    }
+  },
+  "agent": {
+    "meta": {
+      "title": "Zostań agentem",
+      "description": "Dołącz do sieci agentów Western Union. Zacznij zarabiać dodatkowy dochód dzięki usługom przekazów pieniężnych Western Union."
+    },
+    "header": {
+      "title": "Zostań agentem Western Union",
+      "subtitle": "Oferujemy profesjonalne doradztwo, zestaw startowy\n z prezentem, szkolenia i wsparcie marketingowe.\n Nie czekaj, otwórz się na nowe możliwości i dołącz do naszej sieci agentów Western Union już dziś! Nasza firma jest oficjalnym partnerem Western Union z 25 letnim doświadczeniem. Współpracujemy z ponad 200 agentami w Polsce. Nasi partnerzy to m.in. kantory wymiany walut, biura podróży, agencje opłat, punkty pocztowe i wiele innych. "
+    },
+    "form": {
+      "title": "Wypełnij formularz i zacznij zarabiać!",
+      "subtitle": "Otwórz się na nowe możliwości z Western Union! Dołącz do naszej sieci Agentów i zobacz, jakie korzyści czekają na Twój biznes:",
+      "benefits": {
+        "earnings": {
+          "title": "Realne zarobki każdego miesiąca",
+          "description": "Dodaj nową usługę, która napędzi Twój biznes! Przyciągnij kolejnych klientów\n i zacznij zarabiać. Realizacja transakcji Western Union zajmuje mniej niż\n 2 minuty i zapewnia dodatkowe źródło dochodu."
+        },
+        "global": {
+          "title": "Silna globalna obecność",
+          "description": "Western Union jest światowym liderem w zakresie międzynarodowych przekazów pieniężnych dzięki rozbudowanej sieci ponad 500 tysięcy punktów partnerskich w ponad 200 krajach i regionach świata."
+        },
+        "innovative": {
+          "title": "Innowacyjne przekazy pieniężne",
+          "description": "Nasi klienci mogą cieszyć się wysyłaniem pieniędzy bezpośrednio z lokalizacji agenta Western Union."
+        },
+        "customers": {
+          "title": "Przyciągnij nowych klientów",
+          "description": "Dzięki rozpoznawalności marki Western Union oraz wsparciu jakie przekazujemy, masz gwarancję zwiększenia liczby obsługiwanych klientów\n i zysków."
+        }
+      },
+      "formFields": {
+        "companyName": {
+          "label": "Nazwa firmy",
+          "placeholder": "Wprowadź nazwę swojej firmy",
+          "description": ""
+        },
+        "city": {
+          "label": "Miasto",
+          "placeholder": "Wprowadź swoje miasto",
+          "description": ""
+        },
+        "locationCount": {
+          "label": "Liczba lokalizacji",
+          "placeholder": "Ile lokalizacji posiadasz?",
+          "description": ""
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Wprowadź swój email",
+          "description": ""
+        },
+        "phoneNumber": {
+          "label": "Numer telefonu",
+          "placeholder": "Wprowadź swój numer telefonu",
+          "description": "Użyjemy go, aby skontaktować się z Tobą w sprawie zostania agentem"
+        },
+        "businessType": {
+          "label": "Typ działalności",
+          "placeholder": "Biuro podróży, kantor, sklep itp.",
+          "description": ""
+        },
+        "message": {
+          "label": "Dodatkowa wiadomość",
+          "placeholder": "Dodatkowe informacje, które chciałbyś przekazać",
+          "description": ""
+        },
+        "submit": "Wyślij zgłoszenie",
+        "success": "Dziękujemy za zgłoszenie! Wkrótce skontaktujemy się z Tobą.",
+        "error": "Wystąpił problem z przesłaniem formularza. Spróbuj ponownie."
+      }
+    },
+    "brand": {
+      "title": {
+        "part1": "Western Union,",
+        "part2": "wiodąca i znana marka"
+      },
+      "description": "Z ponad 170-letnim doświadczeniem w przesyłaniu pieniędzy, Western Union jest światowym liderem branży w globalnych transferach pieniężnych i usługach płatniczych. Globalna marka oferująca innowacyjne, efektywne przekazy pieniężne. Wysyłanie pieniędzy bezpośrednio w lokalizacji agenta, zainicjowanie transferu z aplikacji Western Union, na konto bankowe lub do portfela mobilnego, jak tylko chcesz."
+    },
+    "offerings": {
+      "tools": {
+        "title": "Narzędzia na start",
+        "description": "Szkolenie krok po kroku - Western Union dba o zapewnienie wsparcia od samego początku. Weźmiesz udział w szkoleniach w zakresie standardów usług przekazów pieniężnych, a także przepisów prawnych, których będziesz musiał przestrzegać."
+      },
+      "starter": {
+        "title": "Zestaw startowy",
+        "description": "Oferujemy za darmo zestaw startowy oraz materiały reklamowe, które przeprowadzą Cię przez proces rejestracji nowej usługi i pomogą zwiększyć świadomość produktu."
+      },
+      "support": {
+        "title": "Wsparcie Western Union",
+        "description": "Zapewniamy skuteczne i realne wsparcie dla wszystkich naszych Agentów. Łatwy kontakt telefoniczny i mailowy. Nasz zespół wsparcia jest zawsze dostępny i gotowy, aby odpowiedzieć na wszelkie pytania."
+      }
+    },
+    "testimonial": {
+      "quote": "Wspaniała współpraca z Twister Poland. Od wielu lat wszystko bezproblemowo i na czas. Zawsze można liczyć na pomoc oraz szybkie wsparcie. Współpraca z nimi to czysta przyjemność. Zdecydowanie polecam!",
+      "name": "Kantor Wymiany Walut Eldolar",
+      "title": "Subagent Western Union"
+    },
+    "faq": {
+      "subheading": "Często zadawane pytania",
+      "heading": "Odpowiedzi na Twoje pytania."
+    }
+  },
+  "becomeAgent": {
+    "title": "Wspólnie z Nami zostań agentem Western Union i zacznij zarabiać!",
+    "lead": "Twister Poland od 25 lat jest oficjalnym partnerem Western Union. Z dumą wspieramy potrzeby przekazów pieniężnych naszych klientów, oferując szybki i bezpieczny serwis.",
+    "description": [
+      "Firma TWISTER powstała w maju 1999 roku. Główny profil działalności to usługi finansowe\n oraz międzynarodowe usługi turystyczne. Od ponad dwóch dekad pomagamy ludziom pozostać w kontakcie dzięki szybkim i bezpiecznym przekazom pieniężnym. Jako oficjalny partner Western Union w Polsce z dumą zarządzamy ogólnopolską siecią ponad 200 zaufanych agentów.",
+      "Nasi partnerzy to m.in. kantory wymiany walut, biura podróży, agencje płatnicze, biura ubezpieczeń, sklepy branżowe i punkty usługowe. Wszystkie placówki partnerskie są odpowiednio oznakowane i realizują przekazy pieniężne z zachowaniem najwyższych standardów obsługi Klienta. Niezależnie od tego, czy wysyłasz pieniądze bliskim, czy odbierasz wsparcie z zagranicy — jesteśmy tu, by każda transakcja przebiegała sprawnie, bezpiecznie\n i bez zbędnego stresu. Zapewniamy pełne wsparcie zarówno klientom, jak i partnerom w całej Polsce.",
+      "Chcesz zostać agentem Western Union? Dołącz do naszej rozwijającej się sieci\n i skorzystaj z preferencyjnych stawek."
+    ],
+    "stats": {
+      "yearsOnMarket": "Lat na rynku",
+      "numberOfAgents": "Subagentów w Polsce",
+      "officialPartner": "Master Agent"
+    },
+    "buttons": {
+      "becomeAgent": "Dołącz do nas",
+      "callUs": "Zadzwoń"
+    },
+    "imageAlt": {
+      "conceptStore": "Zostań agentem",
+      "secondImage": "Punkt partnerski"
+    }
+  }
+}
