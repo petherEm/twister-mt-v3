@@ -539,7 +539,7 @@ export function Footer({
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <Link
-                  href={`/${lang}/polityka-prywatnosci`}
+                  href={`/${lang}/${lang === "pl" ? "polityka-prywatnosci" : "privacy-policy"}`}
                   className="text-wu-official text-sm hover:opacity-80 transition-colors duration-200 underline-offset-4 hover:underline"
                 >
                   {dict.footer?.company?.privacyPolicy ||
