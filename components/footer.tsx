@@ -408,32 +408,27 @@ export function Footer({
             {/* Logo and description - on the left */}
             <div className="col-span-2 md:col-span-5 order-1 md:order-1">
               <motion.div
-                className="flex flex-wrap items-start -ml-4 mb-6"
+                className="flex items-center gap-4 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                {/* Official Partner */}
-                <div className="flex flex-col w-fit text-center items-center">
-                  {/* <div className="relative h-16 w-36">
-                    <Image
-                      src="/wu-logo-black.svg"
-                      alt="WU logo black"
-                      fill
-                      className="object-contain"
-                    />
-                  </div> */}
-                </div>
-                <div className="flex-shrink-0">
-                  <Image
-                    src="/mt-logo-4.png"
-                    alt="Twister MT Logo"
-                    width={200}
-                    height={72}
-                    className="object-contain "
-                  />
-                </div>
+                <Image
+                  src="/mt-logo-4.png"
+                  alt="Twister MT Logo"
+                  width={200}
+                  height={60}
+                  className="h-14 w-auto object-contain"
+                />
+                <div className="h-12 w-px bg-white/30" />
+                <Image
+                  src="/wu-logo-official-5.png"
+                  alt="Western Union Logo"
+                  width={200}
+                  height={60}
+                  className="h-14 w-auto object-contain"
+                />
               </motion.div>
 
               <motion.p
