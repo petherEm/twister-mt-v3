@@ -98,70 +98,73 @@ export default function Hero({ dict, lang }: HeroProps) {
       {/* Main content */}
       <div className="relative z-10 min-h-[92vh] flex items-center">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
 
             {/* Left content column */}
             <motion.div
-              className="order-2 lg:order-1"
+              className="order-2 lg:order-1 flex flex-col h-full"
               variants={containerVariants}
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}
             >
-              {/* Small badge */}
-              <motion.div variants={itemVariants} className="mb-6">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
-                  {dict.hero.badge}
-                </span>
-              </motion.div>
+              {/* Main content */}
+              <div>
+                {/* Small badge */}
+                <motion.div variants={itemVariants} className="mb-6">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
+                    {dict.hero.badge}
+                  </span>
+                </motion.div>
 
-              {/* Title with animated underline */}
-              <motion.div variants={itemVariants}>
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-                  {dict.hero.title}
-                </h1>
-                {/* Animated underline */}
+                {/* Title with animated underline */}
+                <motion.div variants={itemVariants}>
+                  <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.05]">
+                    {dict.hero.title}
+                  </h1>
+                  {/* Animated underline */}
+                  <motion.div
+                    className="mt-4 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-transparent rounded-full"
+                    initial={{ width: 0 }}
+                    animate={isLoaded ? { width: "40%" } : { width: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                  />
+                </motion.div>
+
+                {/* Subtitle */}
+                <motion.p
+                  variants={itemVariants}
+                  className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-lg"
+                >
+                  {dict.hero.subtitle}
+                </motion.p>
+
+                {/* Buttons */}
                 <motion.div
-                  className="mt-4 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-transparent rounded-full"
-                  initial={{ width: 0 }}
-                  animate={isLoaded ? { width: "40%" } : { width: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                />
-              </motion.div>
+                  variants={itemVariants}
+                  className="mt-8 flex flex-col sm:flex-row gap-4"
+                >
+                  <Button
+                    variant="primary"
+                    className="transform hover:scale-105 transition-all duration-200"
+                    href={`/${lang}/wyslij-odbierz`}
+                  >
+                    {dict.hero.sendReceiveButton}
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    className="transform hover:scale-105 transition-all duration-200"
+                    href={`/${lang}/agent`}
+                  >
+                    {dict.hero.becomeAgentButton}
+                  </Button>
+                </motion.div>
+              </div>
 
-              {/* Subtitle */}
-              <motion.p
-                variants={itemVariants}
-                className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-lg"
-              >
-                {dict.hero.subtitle}
-              </motion.p>
-
-              {/* Buttons */}
+              {/* Partner logos - pushed to bottom to align with image */}
               <motion.div
                 variants={itemVariants}
-                className="mt-8 flex flex-col sm:flex-row gap-4"
-              >
-                <Button
-                  variant="primary"
-                  className="transform hover:scale-105 transition-all duration-200"
-                  href={`/${lang}/wyslij-odbierz`}
-                >
-                  {dict.hero.sendReceiveButton}
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="transform hover:scale-105 transition-all duration-200"
-                  href={`/${lang}/agent`}
-                >
-                  {dict.hero.becomeAgentButton}
-                </Button>
-              </motion.div>
-
-              {/* Partner logos */}
-              <motion.div
-                variants={itemVariants}
-                className="mt-10 flex items-center gap-6"
+                className="mt-8 lg:mt-auto pt-0 lg:pt-8 flex items-center justify-center lg:justify-start gap-6"
               >
                 <Image
                   src="/mt-logo-4.png"
@@ -179,8 +182,7 @@ export default function Hero({ dict, lang }: HeroProps) {
                   className="h-12 w-auto object-contain"
                 />
               </motion.div>
-
-              </motion.div>
+            </motion.div>
 
             {/* Right image column */}
             <motion.div

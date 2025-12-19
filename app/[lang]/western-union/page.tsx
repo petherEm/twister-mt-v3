@@ -219,10 +219,9 @@ function FrequentlyAskedQuestions({ dict, lang }: FAQProps) {
 export default async function WesternUnion({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang;
+  const { lang } = await params;
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
   return (

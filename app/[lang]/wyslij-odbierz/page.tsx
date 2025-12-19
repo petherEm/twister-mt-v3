@@ -26,9 +26,10 @@ import PricesHero from "@/components/main/prices-hero";
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const dict = await getDictionary(params.lang as "en" | "pl" | "ua");
+  const { lang } = await params;
+  const dict = await getDictionary(lang as "en" | "pl" | "ua");
   return {
     title: dict.trackTransfer.metadata.title,
     description: dict.trackTransfer.metadata.description,
@@ -342,10 +343,9 @@ function Header({ dict }: HeaderProps) {
 export default async function TrackTransfer({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang;
+  const { lang } = await params;
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
   return (

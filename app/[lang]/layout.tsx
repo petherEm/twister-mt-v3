@@ -1,5 +1,5 @@
 import "@/styles/tailwind.css";
-import { locales } from "@/middleware";
+import { locales } from "@/proxy";
 import { Container } from "@/components/util/container";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -41,10 +41,10 @@ export const viewport: Viewport = {
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
-  const paramsAwaited = await params;
-  const dict = await getDictionary(paramsAwaited.lang as "en" | "pl" | "ua");
+  const { lang } = await params;
+  const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
   // Fix the baseUrl handling
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
@@ -79,7 +79,7 @@ export async function generateMetadata({
     // Canonical URL
     metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: `/${paramsAwaited.lang}`,
+      canonical: `/${lang}`,
       languages: {
         en: "/en",
         pl: "/pl",
@@ -90,8 +90,8 @@ export async function generateMetadata({
     // Open Graph
     openGraph: {
       type: "website",
-      locale: paramsAwaited.lang,
-      url: `${baseUrl}/${paramsAwaited.lang}`,
+      locale: lang,
+      url: `${baseUrl}/${lang}`,
       title: "Money Transfer PL | Twister",
       description:
         dict.metadata?.ogDescription ||

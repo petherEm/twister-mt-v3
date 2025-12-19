@@ -40,7 +40,7 @@ export default function BecomeAgentMain({
         <div className="relative min-h-[auto] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left column - all text content */}
-            <div className="z-10 flex flex-col h-full justify-between order-2 md:order-1">
+            <div className="z-10 flex flex-col h-full justify-between order-1 md:order-1">
               <div>
                 <Heading as="h1" className="!font-bold text-black">
                   {dict.becomeAgent.title}
@@ -81,7 +81,7 @@ export default function BecomeAgentMain({
             </div>
 
             {/* Right column - both images, stats, and WU logo */}
-            <div className="flex flex-col h-full order-1 md:order-2">
+            <div className="flex flex-col h-full order-2 md:order-2">
               {/* First image */}
               <div className="relative h-[400px] md:h-[450px] overflow-hidden shadow-md mb-6">
                 <Image
@@ -94,15 +94,14 @@ export default function BecomeAgentMain({
                 />
               </div>
 
-              {/* Second image */}
-              <div className="relative h-[280px] overflow-hidden shadow-md mb-6">
+              {/* Second image - hidden on mobile */}
+              <div className="hidden md:block relative h-[280px] overflow-hidden shadow-md mb-6">
                 <Image
                   src="/main-page-money.jpg"
                   alt={dict.becomeAgent.imageAlt.secondImage}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
+                  sizes="50vw"
                 />
               </div>
 

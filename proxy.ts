@@ -21,7 +21,7 @@ function getLocale(request: NextRequest) {
   return match(languages, locales, defaultLocale)
 }
 
-export const middleware = (request: NextRequest) => {
+export const proxy = (request: NextRequest) => {
   const pathname = request.nextUrl.pathname
 
   // Skip internal Next.js paths and public paths
@@ -32,13 +32,13 @@ export const middleware = (request: NextRequest) => {
     pathname.includes(".") || // Skip files with extensions
     PUBLIC_PATHS.some((path) => pathname.startsWith(path)) // Skip public paths
   ) {
-    return
+    return NextResponse.next()
   }
 
   // Check if the pathname already has a locale
   const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
 
-  if (pathnameHasLocale) return
+  if (pathnameHasLocale) return NextResponse.next()
 
   // Redirect if there is no locale
   const locale = getLocale(request)
@@ -46,9 +46,6 @@ export const middleware = (request: NextRequest) => {
 
   return NextResponse.redirect(request.nextUrl)
 }
-
-// Use experimental-edge runtime as required
-export const runtime = "experimental-edge"
 
 // Update matcher to be more specific and exclude studio
 export const matcher = [

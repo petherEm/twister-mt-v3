@@ -307,10 +307,12 @@ function FrequentlyAskedQuestions({
   );
 }
 
-export default async function Agent({ params }: { params: { lang: string } }) {
-  // Await the params object before accessing lang
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang;
+export default async function Agent({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
 
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
