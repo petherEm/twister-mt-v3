@@ -116,9 +116,10 @@
     }
   },
   "prices": {
-    "title": "Visit us and Send Money Now!",
+    "title": "Visit Us|and Send Money|Now!",
     "description": "At our office in Wrocław, you can send or receive money. We're waiting for you.",
     "contactButton": "Contact us",
+    "badge": "Send or Receive Money",
     "promotion": "Current promotion: Send money to Ukraine for only 9.99 PLN!",
     "rates": "Our Transfer Rates",
     "toCash": "To Cash",
@@ -332,7 +333,7 @@
     },
     "testimonial": {
       "quote": "Great cooperation with Master Agent Twister. For many years, everything has been on time and trouble-free. You can always count on help and support. Working with them is a pure pleasure. I definitely recommend it!",
-      "name": "Kantor Wymiany Walut Eldolar",
+      "name": "Kantor Wymiany Walut CFS",
       "title": "Western Union Subagent"
     },
     "faq": {
@@ -345,7 +346,8 @@
     "subtitle": "For over 20 years, we've been Western Union's partner in Poland. Send and receive money safely!",
     "becomeAgentButton": "Join our network",
     "sendReceiveButton": "Know More",
-    "imageAlt": "Western Union Service"
+    "imageAlt": "Western Union Service",
+    "badge": "Official Western Union Partner"
   },
   "midBanner": {
     "partnerText": "Master Agent in Poland - ",

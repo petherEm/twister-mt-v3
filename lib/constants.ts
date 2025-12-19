@@ -232,12 +232,12 @@ export const BECOME_AGENT_FAQ = [
     question: {
       en: "How do I apply to become a Western Union agent?",
       pl: "Jak aplikować na agenta Western Union?",
-      ua: "Jak aplikować na agenta Western Union?"
+      ua: "Як подати заявку на агента Western Union?"
     },
     answer: {
-      en: "The typical timeframe from application to becoming an active Western Union agent is 4-8 weeks. This includes application review, compliance checks, training, equipment installation, and final activation. We work diligently to make this process as efficient as possible.",
-      pl: "Należy wypełnić formularz online / tu link /. Po jego otrzymaniu, skontaktuje się z Tobą nasz przedstawiciel celem mówienie oferty i procedury rejestracji. Po zatwierdzeniu dokumentów ze strony Western Union, otrzymasz pakiet startowy dostęp do systemu WU online i wsparcie nie tylko na rozpoczęcie działalności.",
-      ua: "Типовий термін від подання заявки до того, як ви станете активним агентом Western Union, становить 4-8 тижнів. Це включає розгляд заявки, перевірку відповідності, навчання, встановлення обладнання та остаточну активацію. Ми старанно працюємо, щоб зробити цей процес максимально ефективним."
+      en: "Fill out the online form {{FORM_LINK:here}}. Once received, our representative will contact you to discuss the offer and registration process. After your documents are approved by Western Union, you'll receive a starter kit, access to the WU online system, and support to get started.",
+      pl: "Należy wypełnić formularz online {{FORM_LINK:tutaj}}. Po jego otrzymaniu, skontaktuje się z Tobą nasz przedstawiciel celem omówienia oferty i procedury rejestracji. Po zatwierdzeniu dokumentów ze strony Western Union, otrzymasz pakiet startowy, dostęp do systemu WU online i wsparcie nie tylko na rozpoczęcie działalności.",
+      ua: "Заповніть онлайн-форму {{FORM_LINK:тут}}. Після отримання наш представник зв'яжеться з вами для обговорення пропозиції та процедури реєстрації. Після затвердження ваших документів Western Union ви отримаєте стартовий пакет, доступ до онлайн-системи WU та підтримку для початку роботи."
     }
   },
   {

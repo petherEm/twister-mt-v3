@@ -4,21 +4,19 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-type HeroProps = {
+type PricesHeroProps = {
   dict: {
-    hero: {
+    prices: {
       title: string;
-      subtitle: string;
-      sendReceiveButton: string;
-      becomeAgentButton: string;
-      imageAlt: string;
-      badge: string;
+      description: string;
+      contactButton: string;
+      badge?: string;
     };
   };
   lang: string;
 };
 
-export default function Hero({ dict, lang }: HeroProps) {
+export default function PricesHero({ dict, lang }: PricesHeroProps) {
   const heroImages = [
     "/new-hero-1.jpg",
     "/new-hero-2.jpg",
@@ -111,14 +109,19 @@ export default function Hero({ dict, lang }: HeroProps) {
               <motion.div variants={itemVariants} className="mb-6">
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-sm font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse" />
-                  {dict.hero.badge}
+                  {dict.prices.badge || "Western Union"}
                 </span>
               </motion.div>
 
               {/* Title with animated underline */}
               <motion.div variants={itemVariants}>
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-                  {dict.hero.title}
+                  {dict.prices.title.split('|').map((line, index) => (
+                    <span key={index}>
+                      {line}
+                      {index < dict.prices.title.split('|').length - 1 && <br />}
+                    </span>
+                  ))}
                 </h1>
                 {/* Animated underline */}
                 <motion.div
@@ -134,7 +137,7 @@ export default function Hero({ dict, lang }: HeroProps) {
                 variants={itemVariants}
                 className="mt-6 text-lg sm:text-xl text-white/70 leading-relaxed max-w-lg"
               >
-                {dict.hero.subtitle}
+                {dict.prices.description}
               </motion.p>
 
               {/* Buttons */}
@@ -145,16 +148,9 @@ export default function Hero({ dict, lang }: HeroProps) {
                 <Button
                   variant="primary"
                   className="transform hover:scale-105 transition-all duration-200"
-                  href={`/${lang}/wyslij-odbierz`}
+                  href={`/${lang}/wyslij-odbierz/#footer`}
                 >
-                  {dict.hero.sendReceiveButton}
-                </Button>
-                <Button
-                  variant="secondary"
-                  className="transform hover:scale-105 transition-all duration-200"
-                  href={`/${lang}/agent`}
-                >
-                  {dict.hero.becomeAgentButton}
+                  {dict.prices.contactButton}
                 </Button>
               </motion.div>
 
@@ -180,7 +176,7 @@ export default function Hero({ dict, lang }: HeroProps) {
                 />
               </motion.div>
 
-              </motion.div>
+            </motion.div>
 
             {/* Right image column */}
             <motion.div
@@ -194,7 +190,7 @@ export default function Hero({ dict, lang }: HeroProps) {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/50 aspect-[4/5] lg:aspect-[3/4]">
                   <Image
                     src={selectedImage}
-                    alt={dict.hero.imageAlt}
+                    alt="Money transfer service"
                     fill
                     className="object-cover object-center"
                     priority

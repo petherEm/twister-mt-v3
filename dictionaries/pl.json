@@ -12,11 +12,12 @@
     "login": "Strefa Agenta"
   },
   "hero": {
-    "title": "Przekazy pieniężne Western Union",
+    "title": "Przekazy Pieniężne Western Union",
     "subtitle": "Od 25 lat jesteśmy oficjalnym partnerem Western Union w Polsce. Wysyłaj i odbieraj pieniądze bezpiecznie!",
     "becomeAgentButton": "Zostań agentem",
     "sendReceiveButton": "Dowiedz się więcej",
-    "imageAlt": "Usługa Western Union"
+    "imageAlt": "Usługa Western Union",
+    "badge": "Oficjalny Partner Western Union"
   },
   "aboutUs": {
     "title": "O nas",
@@ -132,9 +133,10 @@
     "becomeAgent": "Zostań Agentem WU z nami"
   },
   "prices": {
-    "title": "Odwiedź nas i wyślij pieniądze już teraz!",
+    "title": "Odwiedź Nas|i Wyślij Pieniądze|Już Teraz!",
     "description": "W naszym biurze we Wrocławiu możesz wysłać bądź odebrać pieniądze. Czekamy na Ciebie.",
     "contactButton": "Skontaktuj się z nami",
+    "badge": "Wyślij lub Odbierz Pieniądze",
     "promotion": "Aktualna promocja: Wyślij pieniądze na Ukrainę za jedyne 9,99 PLN!",
     "rates": "Aktualne ceny",
     "toCash": "Gotówka",
@@ -253,7 +255,7 @@
       "title": "Chcesz wysłać lub odebrać przekaz?",
       "highlightSend": "wysłać",
       "highlightReceive": "odebrać",
-      "description": "Zapraszamy do nas – profesjonalny zespół pomoże Ci w sprawnym i bezpiecznym sfinalizowaniu transakcji.",
+      "description": "Zapraszamy do naszego biura we Wrocławiu, gdzie szybko i wygodnie wyślesz lub odbierzesz pieniądze.",
       "address": "Adres",
       "companyName": "Western Union Wrocław",
       "street": "ul. T. Kościuszki 27",
@@ -377,7 +379,7 @@
     },
     "testimonial": {
       "quote": "Wspaniała współpraca z Twister Poland. Od wielu lat wszystko bezproblemowo i na czas. Zawsze można liczyć na pomoc oraz szybkie wsparcie. Współpraca z nimi to czysta przyjemność. Zdecydowanie polecam!",
-      "name": "Kantor Wymiany Walut Eldolar",
+       "name": "Kantor Wymiany Walut CFS",
       "title": "Subagent Western Union"
     },
     "faq": {

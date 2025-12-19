@@ -20,6 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { FaqAnswer } from "@/components/main/faq-answer";
 
 export const metadata: Metadata = {
   title: "Zostań agentem",
@@ -293,7 +294,9 @@ function FrequentlyAskedQuestions({
                     faq.question.en}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm/6 text-gray-400">
-                  {faq.answer[lang as keyof typeof faq.answer] || faq.answer.en}
+                  <FaqAnswer
+                    answer={faq.answer[lang as keyof typeof faq.answer] || faq.answer.en}
+                  />
                 </AccordionContent>
               </AccordionItem>
             ))}

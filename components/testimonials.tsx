@@ -151,7 +151,7 @@ export function Testimonials({
             alt="Logo"
             width={300}
             height={200}
-            className="bg-transparent"
+            className="bg-transparent w-28 sm:w-40 md:w-52 lg:w-[300px] h-auto"
           />
         </div>
       </Container>

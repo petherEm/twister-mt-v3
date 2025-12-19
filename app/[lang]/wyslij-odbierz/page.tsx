@@ -21,6 +21,7 @@ import {
   Receipt,
 } from "lucide-react";
 import { COUNTRY_PRICING } from "@/lib/constants";
+import PricesHero from "@/components/main/prices-hero";
 
 export async function generateMetadata({
   params,
@@ -57,50 +58,7 @@ function AboutPrices({ dict, lang }: { dict: any; lang: string }) {
   return (
     <>
       {/* About Prices Hero Section */}
-      <Container className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-16 lg:gap-8 lg:items-start">
-          {/* Left content column - takes 6 of 12 columns */}
-          <div className="lg:col-span-7 z-10 flex flex-col justify-center h-full">
-            <h1 className="font-display text-5xl font-bold tracking-normal text-balance text-wu-official sm:text-7xl md:text-7xl">
-              {dict.prices.title}
-            </h1>
-            <p className="mt-8 max-w-lg text-lg/7 font-medium text-white sm:text-xl/8">
-              {dict.prices.description}
-            </p>
-            <div className="mt-10">
-              <Button
-                variant="primary"
-                href={`/${lang}/wyslij-odbierz/#footer`}
-              >
-                {dict.prices.contactButton}
-              </Button>
-            </div>
-          </div>
-
-          {/* Right image column - takes 10 of 16 columns */}
-          <div className="lg:col-span-9 mt-4 lg:mt-0 relative">
-            <div className="relative overflow-hidden h-full max-h-[90vh]">
-              {/* Left side gradient - discrete fade from content */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0b] via-[#27272a]/40 to-transparent z-10 w-1/2"></div>
-
-              {/* Right side gradient - subtle edge blending only */}
-              <div className="absolute top-0 right-0 bottom-0 bg-gradient-to-l from-[#0b0b0b] via-[#0b0b0b]/30 to-transparent z-10 w-1/4"></div>
-
-              {/* Top and bottom gradients for smooth blending - more subtle */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0b0b0b]/20 via-transparent to-[#0b0b0b]/20 z-10"></div>
-
-              <Image
-                src="/new-hero-1.jpg"
-                alt="Money transfer service"
-                width={900}
-                height={1000}
-                className="object-contain object-left-top  lg:object-cover h-auto w-full max-h-[90vh]"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </Container>
+      <PricesHero dict={dict} lang={lang} />
 
       <Container className="mt-16">
         {/* Country Pricing Section */}
