@@ -9,6 +9,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import DemoPage from "@/components/price-tag-demo";
 import { Footer } from "@/components/footer";
 import { NavbarWithPath } from "@/components/navbar-with-path";
+import { JsonLd } from "@/components/json-ld";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,22 @@ export const viewport: Viewport = {
   ],
 };
 
+// Locale-specific OG metadata
+const ogMetadata = {
+  pl: {
+    title: "Twister Money Transfers | Zostań Agentem Western Union",
+    description: "Przekazy pieniężne Western Union w Polsce. Zostań agentem i rozwiń swój biznes z globalną marką.",
+  },
+  en: {
+    title: "Twister Money Transfers | Become a Western Union Agent",
+    description: "Western Union money transfers in Poland. Become an agent and grow your business with a global brand.",
+  },
+  ua: {
+    title: "Twister Money Transfers | Стати агентом Western Union",
+    description: "Грошові перекази Western Union у Польщі. Станьте агентом та розвивайте свій бізнес з глобальним брендом.",
+  },
+};
+
 // Generate metadata based on locale
 export async function generateMetadata({
   params,
@@ -50,6 +67,9 @@ export async function generateMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
     ? process.env.NEXT_PUBLIC_BASE_URL.replace(/\/$/, "") // Remove trailing slash
     : "https://moneytransfer.pl";
+
+  // Get locale-specific OG data
+  const og = ogMetadata[lang as keyof typeof ogMetadata] || ogMetadata.pl;
 
   return {
     // Basic metadata
@@ -83,28 +103,34 @@ export async function generateMetadata({
       languages: {
         en: "/en",
         pl: "/pl",
-        ua: "/ua", // Remove the @ts-expect-error
+        uk: "/ua",
       },
     },
 
-    // Open Graph
+    // Open Graph - locale-specific
     openGraph: {
       type: "website",
-      locale: lang,
+      locale: lang === "ua" ? "uk_UA" : lang === "pl" ? "pl_PL" : "en_US",
       url: `${baseUrl}/${lang}`,
-      title: "Money Transfer PL | Twister",
-      description:
-        dict.metadata?.ogDescription ||
-        "Fast and secure international money transfers with Twister and Western Union.",
+      title: og.title,
+      description: dict.metadata?.ogDescription || og.description,
       siteName: "Twister Money Transfers",
       images: [
         {
           url: `${baseUrl}/mt-logo-4.png`,
           width: 1200,
           height: 630,
-          alt: "Money Transfer PL | Twister",
+          alt: og.title,
         },
       ],
+    },
+
+    // Twitter Card - locale-specific
+    twitter: {
+      card: "summary_large_image",
+      title: og.title,
+      description: dict.metadata?.ogDescription || og.description,
+      images: [`${baseUrl}/mt-logo-4.png`],
     },
 
     // Robots
@@ -120,10 +146,12 @@ export async function generateMetadata({
       },
     },
 
-    // Verification
+    // Verification - TODO: Replace with actual verification codes
+    // Google: Get from Google Search Console (https://search.google.com/search-console)
+    // Yandex: Get from Yandex Webmaster (https://webmaster.yandex.com)
     verification: {
-      google: "your-google-verification-code",
-      yandex: "your-yandex-verification-code",
+      google: process.env.GOOGLE_SITE_VERIFICATION || "your-google-verification-code",
+      yandex: process.env.YANDEX_SITE_VERIFICATION || "your-yandex-verification-code",
     },
 
     // Icons
@@ -171,6 +199,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <JsonLd lang={lang} />
         <DemoPage />
         <Container>
           <NavbarWithPath lang={lang} dict={dict} />

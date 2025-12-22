@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/util/container";
 import { Heading } from "@/components/util/text";
+import { Button } from "@/components/util/button";
 import {
   Banknote,
   Landmark,

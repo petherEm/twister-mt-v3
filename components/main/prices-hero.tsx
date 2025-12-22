@@ -100,7 +100,7 @@ export default function PricesHero({ dict, lang }: PricesHeroProps) {
 
             {/* Left content column */}
             <motion.div
-              className="order-2 lg:order-1 flex flex-col h-full"
+              className="order-1 flex flex-col h-full"
               variants={containerVariants}
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}
@@ -155,34 +155,34 @@ export default function PricesHero({ dict, lang }: PricesHeroProps) {
                     {dict.prices.contactButton}
                   </Button>
                 </motion.div>
-              </div>
 
-              {/* Partner logos - pushed to bottom to align with image */}
-              <motion.div
-                variants={itemVariants}
-                className="mt-8 lg:mt-auto pt-0 lg:pt-8 flex items-center justify-center lg:justify-start gap-6"
-              >
-                <Image
-                  src="/mt-logo-4.png"
-                  alt="Money Transfer Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto object-contain"
-                />
-                <div className="h-10 w-px bg-white/20" />
-                <Image
-                  src="/wu-logo-official-5.png"
-                  alt="Western Union Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto object-contain"
-                />
-              </motion.div>
+                {/* Partner logos - right below buttons */}
+                <motion.div
+                  variants={itemVariants}
+                  className="mt-8 flex items-center justify-center lg:justify-start gap-6"
+                >
+                  <Image
+                    src="/mt-logo-4.png"
+                    alt="Money Transfer Logo"
+                    width={180}
+                    height={50}
+                    className="h-12 w-auto object-contain"
+                  />
+                  <div className="h-10 w-px bg-white/20" />
+                  <Image
+                    src="/wu-logo-official-5.png"
+                    alt="Western Union Logo"
+                    width={180}
+                    height={50}
+                    className="h-12 w-auto object-contain"
+                  />
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Right image column */}
             <motion.div
-              className="order-1 lg:order-2 relative"
+              className="order-2 relative"
               variants={imageContainerVariants}
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}

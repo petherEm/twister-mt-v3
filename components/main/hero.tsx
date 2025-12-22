@@ -102,7 +102,7 @@ export default function Hero({ dict, lang }: HeroProps) {
 
             {/* Left content column */}
             <motion.div
-              className="order-2 lg:order-1 flex flex-col h-full"
+              className="order-1 flex flex-col h-full"
               variants={containerVariants}
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}
@@ -120,7 +120,12 @@ export default function Hero({ dict, lang }: HeroProps) {
                 {/* Title with animated underline */}
                 <motion.div variants={itemVariants}>
                   <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-                    {dict.hero.title}
+                    {dict.hero.title.split('|').map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < dict.hero.title.split('|').length - 1 && <br />}
+                      </span>
+                    ))}
                   </h1>
                   {/* Animated underline */}
                   <motion.div
@@ -159,34 +164,34 @@ export default function Hero({ dict, lang }: HeroProps) {
                     {dict.hero.becomeAgentButton}
                   </Button>
                 </motion.div>
-              </div>
 
-              {/* Partner logos - pushed to bottom to align with image */}
-              <motion.div
-                variants={itemVariants}
-                className="mt-8 lg:mt-auto pt-0 lg:pt-8 flex items-center justify-center lg:justify-start gap-6"
-              >
-                <Image
-                  src="/mt-logo-4.png"
-                  alt="Money Transfer Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto object-contain"
-                />
-                <div className="h-10 w-px bg-white/20" />
-                <Image
-                  src="/wu-logo-official-5.png"
-                  alt="Western Union Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto object-contain"
-                />
-              </motion.div>
+                {/* Partner logos - right below buttons */}
+                <motion.div
+                  variants={itemVariants}
+                  className="mt-8 flex items-center justify-center lg:justify-start gap-6"
+                >
+                  <Image
+                    src="/mt-logo-4.png"
+                    alt="Money Transfer Logo"
+                    width={180}
+                    height={50}
+                    className="h-12 w-auto object-contain"
+                  />
+                  <div className="h-10 w-px bg-white/20" />
+                  <Image
+                    src="/wu-logo-official-5.png"
+                    alt="Western Union Logo"
+                    width={180}
+                    height={50}
+                    className="h-12 w-auto object-contain"
+                  />
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Right image column */}
             <motion.div
-              className="order-1 lg:order-2 relative"
+              className="order-2 relative"
               variants={imageContainerVariants}
               initial="hidden"
               animate={isLoaded ? "visible" : "hidden"}

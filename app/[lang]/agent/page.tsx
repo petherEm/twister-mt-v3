@@ -21,26 +21,119 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FaqAnswer } from "@/components/main/faq-answer";
+import { BreadcrumbJsonLd, breadcrumbConfigs } from "@/components/json-ld";
 
-export const metadata: Metadata = {
-  title: "Zostań agentem",
-  description:
-    "Zostań agentem Western Union i zarabiaj na transakcjach międzynarodowych.",
-  openGraph: {
-    title: "Zostań agentem",
+const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, "") ||
+  "https://moneytransfer.pl";
+
+// Locale-specific metadata for the agent page - focused on recruitment
+const agentMetadata = {
+  pl: {
+    title: "Zostań Agentem Western Union | Dołącz do Twister",
     description:
-      "Zostań agentem Western Union i zarabiaj na transakcjach międzynarodowych.",
-    url: "https://www.westernunion.com/agent",
-    images: [
-      {
-        url: "https://www.westernunion.com/agent/og-image.jpg",
-        width: 1200,
-        height: 630,
-      },
+      "Zostań agentem Western Union w Polsce. Bez opłat wstępnych, pełne szkolenie, atrakcyjne prowizje. Wypełnij formularz i rozwiń swój biznes z globalną marką!",
+    keywords: [
+      "zostań agentem Western Union",
+      "agent Western Union praca",
+      "punkt Western Union jak otworzyć",
+      "Western Union franczyza",
+      "agent przekazów pieniężnych",
+      "prowizje Western Union",
+      "Western Union Polska agent",
     ],
-    siteName: "Western Union",
+  },
+  en: {
+    title: "Become a Western Union Agent | Join Twister Network",
+    description:
+      "Become a Western Union agent in Poland. No upfront fees, full training, attractive commissions. Fill out the form and grow your business with a global brand!",
+    keywords: [
+      "become Western Union agent",
+      "Western Union agent application",
+      "money transfer agent",
+      "Western Union franchise Poland",
+      "Western Union commission rates",
+      "start Western Union business",
+    ],
+  },
+  ua: {
+    title: "Стати агентом Western Union | Приєднуйтесь до Twister",
+    description:
+      "Станьте агентом Western Union у Польщі. Без початкових внесків, повне навчання, привабливі комісії. Заповніть форму та розвивайте свій бізнес з глобальним брендом!",
+    keywords: [
+      "стати агентом Western Union",
+      "агент Western Union робота",
+      "грошові перекази агент",
+      "Western Union франшиза Польща",
+      "комісія Western Union",
+    ],
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const locale = lang as keyof typeof agentMetadata;
+  const meta = agentMetadata[locale] || agentMetadata.pl;
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/agent`,
+      languages: {
+        pl: `${BASE_URL}/pl/agent`,
+        en: `${BASE_URL}/en/agent`,
+        uk: `${BASE_URL}/ua/agent`,
+      },
+    },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: `${BASE_URL}/${lang}/agent`,
+      type: "website",
+      images: [
+        {
+          url: `${BASE_URL}/mt-logo-4.png`,
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+    },
+  };
+}
+
+// FAQPage JSON-LD Schema component
+function FaqJsonLd({ lang }: { lang: string }) {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: BECOME_AGENT_FAQ.map((faq) => ({
+      "@type": "Question",
+      name: faq.question[lang as keyof typeof faq.question] || faq.question.en,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: (faq.answer[lang as keyof typeof faq.answer] || faq.answer.en)
+          .replace(/\{\{FORM_LINK:[^}]+\}\}/g, "")
+          .trim(),
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(faqSchema),
+      }}
+    />
+  );
+}
 
 function Header({ dict }: { dict: any }) {
   return (
@@ -307,6 +400,13 @@ function FrequentlyAskedQuestions({
   );
 }
 
+// Breadcrumb names per locale
+const breadcrumbNames = {
+  pl: "Zostań Agentem",
+  en: "Become an Agent",
+  ua: "Стати Агентом",
+};
+
 export default async function Agent({
   params,
 }: {
@@ -315,14 +415,19 @@ export default async function Agent({
   const { lang } = await params;
 
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
+  const breadcrumbName = breadcrumbNames[lang as keyof typeof breadcrumbNames] || breadcrumbNames.pl;
 
   return (
-    <main className="overflow-hidden">
-      <Header dict={dict} />
-      <FormContainer dict={dict} lang={lang} />
-      <Benefits dict={dict} />
-      <Testimonial dict={dict} />
-      <FrequentlyAskedQuestions dict={dict} lang={lang} />
-    </main>
+    <>
+      <FaqJsonLd lang={lang} />
+      <BreadcrumbJsonLd items={breadcrumbConfigs.agent(lang, breadcrumbName)} />
+      <div className="overflow-hidden">
+        <Header dict={dict} />
+        <FormContainer dict={dict} lang={lang} />
+        <Benefits dict={dict} />
+        <Testimonial dict={dict} />
+        <FrequentlyAskedQuestions dict={dict} lang={lang} />
+      </div>
+    </>
   );
 }

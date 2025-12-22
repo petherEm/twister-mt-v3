@@ -142,14 +142,14 @@ export function WUHistory({ dict, lang = "en" }: WUHistoryProps) {
       en: "Western Union Timeline",
       pl: "Historia Western Union",
       ua: "Історія Western Union",
-    }[lang] || "Western Union Timeline";
+    }[lang as "en" | "pl" | "ua"] || "Western Union Timeline";
 
   const defaultLead =
     {
       en: "From telegraph company to global financial services leader",
       pl: "Od firmy telegraficznej do globalnego lidera usług finansowych",
       ua: "Від телеграфної компанії до світового лідера фінансових послуг",
-    }[lang] || "From telegraph company to global financial services leader";
+    }[lang as "en" | "pl" | "ua"] || "From telegraph company to global financial services leader";
 
   return (
     <div id="history" className="overflow-hidden py-24 bg-white">
@@ -187,18 +187,18 @@ export function WUHistory({ dict, lang = "en" }: WUHistoryProps) {
           // Get localized content if available
           const title =
             typeof event.title === "object"
-              ? event.title[lang as string] || event.title.en
+              ? event.title[lang as keyof typeof event.title] || event.title.en
               : event.title;
 
           const description =
             typeof event.description === "object"
-              ? event.description[lang as string] || event.description.en
+              ? event.description[lang as keyof typeof event.description] || event.description.en
               : event.description;
 
           // Handle year as a localizable field too
           const year =
             typeof event.year === "object"
-              ? event.year[lang as string] || event.year.en
+              ? event.year[lang as keyof typeof event.year] || event.year.en
               : event.year;
 
           return (

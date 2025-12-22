@@ -225,11 +225,11 @@ export default async function WesternUnion({
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <GradientBackground />
       <Header dict={dict} />
       <HistoryPage dict={dict} lang={lang} />
       <FrequentlyAskedQuestions dict={dict} lang={lang} />
-    </main>
+    </div>
   );
 }

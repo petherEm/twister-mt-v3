@@ -349,10 +349,10 @@ export default async function TrackTransfer({
   const dict = await getDictionary(lang as "en" | "pl" | "ua");
 
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <GradientBackground />
       <AboutPrices dict={dict} lang={lang} />
       <Header dict={dict} />
-    </main>
+    </div>
   );
 }

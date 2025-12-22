@@ -34,7 +34,7 @@ export const FAQ_ITEMS = [
     },
     answer: {
       en: "You'll need to complete a \"To Send Money\" form and pay the agent the amount you want to send, plus fees, in cash.\n\nTo pick up the money, the receiver will complete a \"To Receive Money\" form at any Western Union agent location and provide proper identification. The agent then pays the transfer amount to the receiver.",
-      pl: "Musisz okazać sie ważnym dokumentem tożsamości / dowód osobisty, paszport, karta pobytu, dokument podróżyny / wskazać dane odbiorcy i zapłacić agentowi całą kwotę, wraz z opłatami, w gotówce. Aby odebrać środki finansowe odbiorca również musi okazać się ważnym dokumentem tożsamości oraz przedstawić szczegóły transakcji w tym m.in. numer MTCN. Po przeprowadzeniu pozytywnej weryfikacji Agent wypłaci transferowaną kwotę. Ważne – Western Union w lokalizacji agenta nie wymaga kart kredytowych, kart debetowych, kont bankowych ani członkostwa.",
+      pl: "Musisz okazać sie ważnym dokumentem tożsamości / dowód osobisty, paszport, karta pobytu, dokument podróżny / wskazać dane odbiorcy i zapłacić agentowi całą kwotę, wraz z opłatami, w gotówce. Aby odebrać środki finansowe odbiorca również musi okazać się ważnym dokumentem tożsamości oraz przedstawić szczegóły transakcji w tym m.in. numer MTCN. Po przeprowadzeniu pozytywnej weryfikacji Agent wypłaci transferowaną kwotę. Ważne – Western Union w lokalizacji agenta nie wymaga kart kredytowych, kart debetowych, kont bankowych ani członkostwa.",
       ua: "Вам потрібно буде заповнити форму \"Щоб відправити гроші\" і сплатити агенту суму, яку ви хочете відправити, плюс комісію, готівкою.\n\nЩоб отримати гроші, одержувач заповнить форму \"Щоб отримати гроші\" в будь-якому пункті агента Western Union і надасть належне посвідчення особи. Потім агент виплачує суму переказу одержувачу."
     }
   },
@@ -211,8 +211,8 @@ export const BECOME_AGENT_FAQ = [
       ua: "Скільки коштує стати агентом Western Union?"
     },
     answer: {
-      en: "There are no upfront fees to become a Western Union agent through our Master Agent program. We provide the necessary training, equipment, and marketing materials as part of our partnership. We earn through the commission structure on transactions processed at your location.",
-      pl: "Nie ma żadnych opłat związanych z nawiązaniem współpracy i byciem agentem Western Union. Wszelkie szkolenia, sprzęt i materiały marketingowe zapewniamy w ramach naszego partnerstwa.",
+      en: "There are no upfront fees to become a Western Union agent through our Master Agent program. We provide the necessary training and marketing materials as part of our partnership. We earn through the commission structure on transactions processed at your location.",
+      pl: "Nie ma żadnych opłat związanych z nawiązaniem współpracy i byciem agentem Western Union. Wszelkie szkolenia i materiały marketingowe zapewniamy w ramach naszego partnerstwa.",
       ua: "Немає попередніх зборів, щоб стати агентом Western Union через нашу програму Головного Агента. Ми надаємо необхідне навчання, обладнання та маркетингові матеріали в рамках нашого партнерства. Ми заробляємо через структуру комісійних за трансакції, що обробляються у вашому закладі."
     }
   },

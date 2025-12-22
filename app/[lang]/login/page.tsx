@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Login() {
   return (
-    <main className="overflow-hidden bg-dark text-black">
+    <div className="overflow-hidden bg-dark text-black">
       <div className="isolate flex min-h-dvh items-center justify-center p-6 lg:p-8">
         <div className="relative w-full max-w-md rounded-xl bg-gradient-to-b from-wu-official to-yellow-500 shadow-md ring-1 ring-black/5">
           {/* Decorative elements - with proper z-index values */}
@@ -90,6 +90,6 @@ export default function Login() {
           </form>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

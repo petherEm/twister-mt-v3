@@ -1,9 +1,12 @@
+"use client";
+
 import { AnimatedNumber } from "@/components/util/animated-number";
 import Image from "next/image";
 import { Container } from "@/components/util/container";
 import { Heading, Lead } from "@/components/util/text";
 import { Button } from "@/components/util/button";
-import { Globe, Clock, Users, Banknote, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 type BecomeAgentProps = {
   dict: {
@@ -11,7 +14,6 @@ type BecomeAgentProps = {
       title: string;
       lead: string;
       description: string[];
-      highlights: string;
       stats: {
         yearsOnMarket: string;
         numberOfAgents: string;
@@ -30,27 +32,86 @@ type BecomeAgentProps = {
   lang?: string;
 };
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, scale: 0.95, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
+const statsVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
 export default function BecomeAgentMain({
   dict,
   lang = "pl",
 }: BecomeAgentProps) {
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <Container className="mt-16 mb-20">
         <div className="relative min-h-[auto] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             {/* Left column - all text content */}
-            <div className="z-10 flex flex-col h-full justify-between order-1 md:order-1">
+            <motion.div
+              className="z-10 flex flex-col h-full justify-between order-1 md:order-1"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <div>
-                <Heading as="h1" className="!font-bold text-black">
-                  {dict.becomeAgent.title}
-                </Heading>
+                <motion.div variants={itemVariants}>
+                  <Heading as="h1" className="!font-bold text-black">
+                    {dict.becomeAgent.title}
+                  </Heading>
+                </motion.div>
 
-                <Lead className="mt-6 !text-black">
-                  {dict.becomeAgent.lead}
-                </Lead>
+                <motion.div variants={itemVariants}>
+                  <Lead className="mt-6 !text-black">
+                    {dict.becomeAgent.lead}
+                  </Lead>
+                </motion.div>
 
-                <div className="mt-8 space-y-3">
+                <motion.div variants={itemVariants} className="mt-8 space-y-3">
                   {dict.becomeAgent.description.map((paragraph, index) => (
                     <p
                       key={index}
@@ -63,8 +124,12 @@ export default function BecomeAgentMain({
                       {paragraph}
                     </p>
                   ))}
-                </div>
-                <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                </motion.div>
+
+                <motion.div
+                  variants={itemVariants}
+                  className="mt-10 flex flex-col sm:flex-row gap-4"
+                >
                   <Button variant="secondary" href={`/${lang}/agent`}>
                     {dict.becomeAgent.buttons.becomeAgent}
                   </Button>
@@ -76,37 +141,62 @@ export default function BecomeAgentMain({
                     <Phone className="mr-2 h-4 w-4" />{" "}
                     {dict.becomeAgent.buttons.callUs}
                   </Button>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Right column - both images, stats, and WU logo */}
-            <div className="flex flex-col h-full order-2 md:order-2">
-              {/* First image */}
-              <div className="relative h-[400px] md:h-[450px] overflow-hidden shadow-md mb-6">
-                <Image
-                  src="/pex-6.jpg"
-                  alt={dict.becomeAgent.imageAlt.conceptStore}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-              </div>
+            <motion.div
+              className="flex flex-col h-full order-2 md:order-2"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              {/* First image - hero style */}
+              <motion.div variants={imageVariants} className="relative mb-6">
+                <div className="relative h-[400px] md:h-[450px] rounded-3xl overflow-hidden shadow-2xl shadow-black/20">
+                  <Image
+                    src="/pex-6.jpg"
+                    alt={dict.becomeAgent.imageAlt.conceptStore}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
+                  {/* Subtle overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                </div>
+                {/* Decorative frame */}
+                <div className="absolute -z-10 -top-3 -right-3 w-full h-full rounded-3xl border-2 border-black/10" />
+                <div className="absolute -z-10 -bottom-3 -left-3 w-20 h-20 rounded-full bg-black/5 blur-xl" />
+              </motion.div>
 
-              {/* Second image - hidden on mobile */}
-              <div className="hidden md:block relative h-[280px] overflow-hidden shadow-md mb-6">
-                <Image
-                  src="/main-page-money.jpg"
-                  alt={dict.becomeAgent.imageAlt.secondImage}
-                  fill
-                  className="object-cover"
-                  sizes="50vw"
-                />
-              </div>
+              {/* Second image - hidden on mobile, hero style */}
+              <motion.div
+                variants={imageVariants}
+                className="hidden md:block relative mb-6"
+              >
+                <div className="relative h-[280px] rounded-3xl overflow-hidden shadow-2xl shadow-black/20">
+                  <Image
+                    src="/main-page-money.jpg"
+                    alt={dict.becomeAgent.imageAlt.secondImage}
+                    fill
+                    className="object-cover"
+                    sizes="50vw"
+                  />
+                  {/* Subtle overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                </div>
+                {/* Decorative frame */}
+                <div className="absolute -z-10 -top-3 -left-3 w-full h-full rounded-3xl border-2 border-black/10" />
+              </motion.div>
 
               {/* Stats section - all 3 items in one row */}
-              <div className="mt-2 grid grid-cols-3 gap-2 mb-6">
+              <motion.div
+                variants={statsVariants}
+                className="mt-2 grid grid-cols-3 gap-2 mb-6"
+              >
                 {/* Years on market counter */}
                 <div className="flex flex-col gap-y-1 border-t border-b border-dotted border-black py-3 w-full text-center">
                   <dt className="text-xs text-black mt-2">
@@ -141,11 +231,11 @@ export default function BecomeAgentMain({
                     {dict.becomeAgent.stats.officialPartner}
                   </dt>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </Container>
-    </main>
+    </div>
   );
 }

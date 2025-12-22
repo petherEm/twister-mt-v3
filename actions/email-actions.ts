@@ -37,7 +37,7 @@ export async function sendAgentFormEmail(formData: FormData) {
       from: `Agent Applications <agent-applications@${process.env.RESEND_DOMAIN}>`,
       to: [process.env.NOTIFICATION_EMAIL as string],
       subject: `Nowe zapytanie o zostanie agentem WU: ${validatedData.companyName}`,
-      reply_to: validatedData.email,
+      replyTo: validatedData.email,
       html: `
         <h1>Potencjalnie Nowy Agent</h1>
         <p><strong>Nazwa firmy:</strong> ${validatedData.companyName}</p>
