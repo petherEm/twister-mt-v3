@@ -100,6 +100,7 @@ const AgentForm = ({
     submit: "Submit",
     success: "Thanks for your submission! We'll be in touch soon.",
     error: "There was a problem submitting your form. Please try again.",
+    validationError: "Please fill in all required fields correctly.",
   };
 
   // Use actual form fields from translations if available, otherwise fallback
@@ -140,9 +141,15 @@ const AgentForm = ({
         });
         form.reset();
       } else {
+        // Use localized validation error message if it's a validation error
+        const errorMessage =
+          result.errorType === "validation"
+            ? formDict.validationError || fallbackFormDict.validationError
+            : result.error || formDict.error;
+
         setFormStatus({
           success: false,
-          message: result.error || formDict.error,
+          message: errorMessage,
         });
       }
     } catch (error) {

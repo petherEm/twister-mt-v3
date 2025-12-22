@@ -19,13 +19,14 @@ const formSchema = z.object({
 export async function sendAgentFormEmail(formData: FormData) {
   try {
     // Extract and validate form data
+    // Convert null to undefined for optional fields (formData.get returns null if empty)
     const data = {
       companyName: formData.get("companyName") as string,
       email: formData.get("email") as string,
       phoneNumber: formData.get("phoneNumber") as string,
       city: formData.get("city") as string,
-      businessType: formData.get("businessType") as string,
-      message: formData.get("message") as string,
+      businessType: (formData.get("businessType") as string) || undefined,
+      message: (formData.get("message") as string) || undefined,
     }
 
     // Validate the data
@@ -101,6 +102,15 @@ export async function sendAgentFormEmail(formData: FormData) {
     return { success: true }
   } catch (error) {
     console.error("Form submission error:", error)
+
+    // Handle Zod validation errors - return type indicator for client-side localization
+    if (error instanceof z.ZodError) {
+      return {
+        success: false,
+        errorType: "validation" as const,
+      }
+    }
+
     return {
       success: false,
       error: error instanceof Error ? error.message : "An unknown error occurred",

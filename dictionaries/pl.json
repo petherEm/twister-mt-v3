@@ -353,7 +353,8 @@
         },
         "submit": "Wyślij zgłoszenie",
         "success": "Dziękujemy za zgłoszenie! Wkrótce skontaktujemy się z Tobą.",
-        "error": "Wystąpił problem z przesłaniem formularza. Spróbuj ponownie."
+        "error": "Wystąpił problem z przesłaniem formularza. Spróbuj ponownie.",
+        "validationError": "Proszę wypełnić poprawnie wszystkie wymagane pola."
       }
     },
     "brand": {

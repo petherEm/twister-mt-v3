@@ -307,7 +307,8 @@
         },
         "submit": "Submit Application",
         "success": "Thanks for your submission! We'll be in touch soon.",
-        "error": "There was a problem submitting your form. Please try again."
+        "error": "There was a problem submitting your form. Please try again.",
+        "validationError": "Please fill in all required fields correctly."
       }
     },
     "brand": {
